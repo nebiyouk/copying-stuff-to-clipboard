@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Copying Text To Clipboard </title>
+</head>
+
+<body>
+    <button onclick="copy('contactnebey@yahoo.com')"> COPY EMAIL TO CLIPBOARD </button>
+
+    <script>
+        function copy(text) {
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+        }
+    </script>
+
+</body>
+</html>
